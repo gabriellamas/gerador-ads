@@ -186,7 +186,8 @@ const CustomDivElement = styled.div `
             bottom: 15px;
             right:50%;
             transform:translate(50%,0%);
-            width:70%;
+            max-width:80px;
+            max-height:40px;
         }
         
         .translate-shape-white{
@@ -273,7 +274,8 @@ const CustomDivElement = styled.div `
             z-index:10;
             bottom:10px;
             left:50%;
-            width:70%;
+            max-width:80px;
+            max-height:40px;
             transform:translate(-50%,0%);
             animation: logoLast160x600;
             animation-timing-function: ease;

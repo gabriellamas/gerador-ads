@@ -185,7 +185,8 @@ const CustomDivElement = styled.div `
             z-index:1;
             bottom: 15px;
             right:15px;
-            width:70px;
+            max-width:80px;
+            max-height:40px;
         }
         
         .translate-shape-white{
@@ -271,7 +272,8 @@ const CustomDivElement = styled.div `
         .img-logo-last{
             position:absolute;
             z-index:10;
-            width:70px;
+            max-width:80px;
+            max-height:40px;
             bottom:10px;
             left:50%;
             transform:translate(-50%,0%);
