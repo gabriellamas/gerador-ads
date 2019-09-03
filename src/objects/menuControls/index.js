@@ -109,7 +109,7 @@ class ProgressBar extends Component {
                     id={'logo'}
                 />
 
-                <button type="button" className="bt-download-banners"><i className="material-icons">cloud_download</i><span>Download Banners</span></button>
+                <button type="button" className="bt-download-banners" onClick={()=>this.props.generateBanners()}><i className="material-icons">cloud_download</i><span>Download Banners</span></button>
 
             </div>
 

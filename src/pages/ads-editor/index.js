@@ -8,6 +8,9 @@ import logo from '../../img/logo.png'
 import car from '../../img/carro-example.png'
 import MenuControls from '../../objects/menuControls/index'
 
+import JSZip from 'jszip'
+import { saveAs } from 'file-saver';
+
 const CustomSectionElement = styled.section`
   .container-banners{
     width:728px;
@@ -249,6 +252,20 @@ class AdsGenerator extends Component {
     colorExample.style.background = selectedColor;
   }
 
+  generateBanners = ()=>{
+    console.log('oi')
+
+    let zip = new JSZip();
+    zip.file("Hello.txt", "Hello World\n");
+    let img = zip.folder("img");
+    img.file(car, '', {base64: true});
+    zip.generateAsync({type:"blob"})
+    .then(function(content) {
+        // see FileSaver.js
+        saveAs(content, "example.zip");
+    });
+  }
+
 
   
   render() {
@@ -263,6 +280,7 @@ class AdsGenerator extends Component {
           getValueInputText4={this.getValueInputText4}
           verifyInputFile={this.verifyInputFile} 
           verifyInputColor={this.verifyInputColor}
+          generateBanners={this.generateBanners}
         />
 
         <div className="timeline-controls">
